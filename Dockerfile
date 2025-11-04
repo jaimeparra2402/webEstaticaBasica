@@ -1,7 +1,4 @@
-FROM httpd
-
-ADD index.html /usr/local/apache2/htdocs
-
+FROM httpd:latest
+COPY . /usr/local/apache2/htdocs/
+VOLUME ["/usr/local/apache2/htdocs/"]
 EXPOSE 80
-
-VOLUME /usr/local/apache2/htdocs
